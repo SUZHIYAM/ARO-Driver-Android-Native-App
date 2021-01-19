@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "724983601319",
+    "firebase_url": "https://aro-71c01.firebaseio.com",
+    "project_id": "aro-71c01",
+    "storage_bucket": "aro-71c01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724983601319:android:f62641c06a8deb77842382",
+        "android_client_info": {
+          "package_name": "com.tn74travellers.aroDriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724983601319-tceba9cedu8n1um778hfcuvma6g9m9mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANb27DSBUhDheFxh6WAjygLvexc8O8X1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724983601319-tceba9cedu8n1um778hfcuvma6g9m9mg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

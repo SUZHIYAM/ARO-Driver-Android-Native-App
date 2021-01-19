@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tn74travellers.aroDriver">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/aro_driver_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/aro_driver_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.tn74travellers.aroDriver.Main.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.View" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tn74travellers.aroDriver.Main.LoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tn74travellers.aroDriver.Main.SettingsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tn74travellers.aroDriver.Main.ProfileActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tn74travellers.aroDriver.Main.DashboardActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tn74travellers.aroDriver.Main.TripConfirmationActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tn74travellers.aroDriver.Main.JourneyDetailsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tn74travellers.aroDriver.Main.OngoingTripActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tn74travellers.aroDriver.Main.EventDayTripListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Common.ImageZoomActivity" />
+        <activity android:name=".Main.MapActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- Firebase Notifications -->
+        <service android:name="com.tn74travellers.aroDriver.PushNotification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.tn74travellers.aroDriver.PushNotification.NotificationReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBEdCEvu--0g0Fq_G9EWQymoOeLngq2PQw"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

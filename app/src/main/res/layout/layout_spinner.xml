@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+<TextView
+    android:id="@+id/tvSpinnerText"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_weight="0.9"
+    android:textSize="14sp"
+    android:fontFamily="@font/quicksand_medium"
+    android:textColor="@color/colorPrimary" />
+
+
+    <ImageView
+        android:id="@+id/iv_trip_details_up_arrow"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_weight="0.1"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/down_arrow"
+        android:contentDescription="@null" />
+
+</LinearLayout>

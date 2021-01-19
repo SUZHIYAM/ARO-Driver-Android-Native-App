@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_e5e5e5"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Toolbar Block -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <!-- Inner Toolbar Block -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:textColor="@color/colorAccent"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:fontFamily="@font/quicksand_bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:id="@+id/iv_settings"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/settings_orange"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:contentDescription="@null"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- OnGoing Trip Button Block -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ongoing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/pure_white_ffffff"
+        android:layout_below="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/tv_ongoing_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On going Trip"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_medium"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_ongoing_trip_right_arrow"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/right_arrow_circle_black"
+                android:contentDescription="@null"/>
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Line to indicate the OnGoing Trip Block -->
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@+id/cl_ongoing_layout"/>
+
+    <!-- New Trip and Calendar Buttons Block -->
+    <LinearLayout
+        android:id="@+id/ll_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/view_line">
+
+        <TextView
+            android:id="@+id/tv_new_trips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Trips"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:textStyle="bold"
+            android:background="@drawable/bg_rect_fill_yellow"/>
+
+        <TextView
+            android:id="@+id/tv_calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:text="Calendar"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:textStyle="bold"
+            android:background="@drawable/bg_rect_fill_grey"/>
+
+    </LinearLayout>
+
+    <!-- Back to Calender Sheet Button -->
+    <RelativeLayout
+        android:id="@+id/rl_back_to_calendar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ll_button_container"
+        android:background="@drawable/bg_rect_fill_yellow">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/left_arrow_212121"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to Calendar Sheet"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/quicksand_medium"
+            android:layout_toRightOf="@+id/iv_back"/>
+
+    </RelativeLayout>
+
+    <!-- New Trip Recycler View -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_new_trip_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@color/grey_e5e5e5"
+        android:layout_below="@+id/rl_back_to_calendar_container"/>
+
+    <!-- Calendar Trip Recycler View -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_calendar_trip_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@color/grey_e5e5e5"
+        android:layout_below="@+id/rl_back_to_calendar_container"/>
+
+    <!-- Calendar Block -->
+    <RelativeLayout
+        android:id="@+id/rl_calendar_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:background="@color/grey_e5e5e5"
+        android:layout_below="@+id/rl_back_to_calendar_container"
+        tools:ignore="MissingConstraints">
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:headerColor="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/calendarView"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/circle_grey_bg"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand_medium"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Past Trips"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand_medium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/circle_yellow_bg"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand_medium"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Future Trips"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand_medium"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- New Trip List Empty Block -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_no_new_trip_found_container"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@color/grey_e5e5e5"
+        android:layout_below="@+id/ll_button_container">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_empty"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/empty_box_64x64_smart_object"
+                android:contentDescription="@null"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/light_grey_949494"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:text="No New Trips Found"
+            android:maxLines="1"
+            android:fontFamily="@font/quicksand_medium"
+            android:layout_below="@+id/rl_empty"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

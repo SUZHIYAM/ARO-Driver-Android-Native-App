@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_splash_screen_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pure_white_ffffff">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_splash_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/driver_app_logo"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tv_gift_dubai_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ARO"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_below="@+id/iv_splash_img"
+            android:textSize="40sp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_loading_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="100dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_powered_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tv_powered_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Powered by"
+            android:fontFamily="@font/quicksand_regular"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_mountmouria"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/mmciits"
+            android:layout_toRightOf="@+id/tv_powered_by" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_glass_whole_update_container"
+        android:visibility="gone"
+        android:background="@color/light_grey_65a2a2a2">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:visibility="visible"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            app:cardCornerRadius="10dp"
+            android:layout_centerVertical="true"
+            app:cardBackgroundColor="@color/pure_white_ffffff"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:id="@+id/rl_update_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:padding="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="ARO Update"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey_3c000000"
+                    android:layout_below="@+id/rl_update_title"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_download"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="100dp"
+                    android:layout_below="@+id/rl_view">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:src="@drawable/driver_app_logo"
+                            android:contentDescription="@null"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/download_128x128"
+                            android:contentDescription="@null"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginTop="80dp"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/quicksand_regular"
+                    android:layout_below="@+id/ll_download"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:weightSum="2"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/tv_skip_update"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/curved_shaped_color_primary_bg"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="Skip"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_white_ffffff"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_update_ok"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/curved_shaped_color_primary_bg"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="Download"
+                        android:layout_marginLeft="60dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_white_ffffff"
+                        android:textAlignment="center"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
